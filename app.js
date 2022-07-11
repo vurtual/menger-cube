@@ -8,8 +8,8 @@ function setup() {
 
 function draw() {
     clear(0, 0, 0, 1)
-    rotateX(-mouseY/400 - height / 2)
-    rotateZ(mouseX/400 - width/2)
+    rotateX(-(mouseY-0.5*height)/400)
+    rotateY((mouseX-0.5*width)/400)
     ambientLight(60, 60, 60);
     pointLight(255, 255, 255, 500,500, 100);
   
@@ -29,7 +29,7 @@ function cubeSplit() {
 
 }
 
-function mouseClicked() {
+function mousePressed() {
     cubeSplit()
 }
 
