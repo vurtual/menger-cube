@@ -37,6 +37,6 @@ function touchStarted() {
     cubeSplit()
 }
 
-touchMoved() {
+function touchMoved() {
     return false
 }
