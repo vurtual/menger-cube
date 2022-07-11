@@ -10,7 +10,8 @@ const Cube = (size, pos) => {
     cube.draw = () => {
         translate(pos.x, pos.y,  pos.z)
 
-        fill(cube.color)
+        // fill(cube.color)
+        normalMaterial(cube.color)
         box(size)
         translate(-pos.x, -pos.y,  -pos.z)
     }

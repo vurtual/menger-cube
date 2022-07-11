@@ -1,33 +1,37 @@
-let angle={x:11,y:-20,z:-5}
+let angle={x:-35,y:10,z:0}
 
 function setup() {
     createCanvas(window.innerWidth-50 ,window.innerHeight-50  , WEBGL)
-    Cube(450, createVector(0,0,0))
-}
+    Cube(1000, createVector(460,-300,-800))
+    noStroke()
+    }
 
 function draw() {
     clear(0, 0, 0, 1)
-    background(20)
-    stroke(127)
+   
+    ambientLight(60, 60, 60);
+    pointLight(255, 255, 255, 500,500, 100);
+  
     rotateX(angle.x)
     rotateY(angle.y)
-    rotateZ(angle.z)
+    rotateZ(angle.z)   
+
     cubes.forEach(cube => cube.draw())
-    angle.x += 0.003
-    angle.y+=0.002
-    angle.z+=0.001
+    // angle.x += 0.003
+    // angle.y+=0.002
+    // angle.z+=0.001
 }
 
-function split() {
+function cubeSplit() {
     const cubes_ = [...cubes]
     cubes_.forEach(cube => cube.split())
 
 }
 
 function mouseClicked() {
-    split()
+    cubeSplit()
 }
 
 function touchStarted() {
-    split()
+    cubeSplit()
 }
