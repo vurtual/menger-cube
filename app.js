@@ -36,3 +36,7 @@ function mouseClicked() {
 function touchStarted() {
     cubeSplit()
 }
+
+touchMoved() {
+    return false
+}
