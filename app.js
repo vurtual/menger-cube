@@ -18,7 +18,16 @@ function draw() {
     angle.z+=0.001
 }
 
-function mouseClicked() {
+function split() {
     const cubes_ = [...cubes]
     cubes_.forEach(cube => cube.split())
+
+}
+
+function mouseClicked() {
+    split()
+}
+
+function touchStarted() {
+    split()
 }
